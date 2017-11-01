@@ -202,16 +202,15 @@ class App extends Component {
 
 export default App
 ```
+这里要稍微注意一点，就是 `render` 里，如果 `return` 多个元素，必须有一个父元素包裹，否则会有个报错
 
-这里要稍微注意一点，就是 `render` 里，如果 `return` 多个元素，必须有一个父元素包裹，否则会有个报错
+我们在return 之外把 `JSX` 复制给变量，`JSX` 里也可以在`{}`内部使用三元表达式，大家可以修改 `isKing` 是 `false` 试一试
 
-我们在return 之外把 `JSX` 复制给变量，`JSX` 里也可以在`{}`内部使用三元表达式，大家可以修改 `isKing` 是 `false` 试一试
-
-然后就是渲染列表，我们使用 `map` 函数直接映射为 `JSX` 的数组，记得列表里每个元素都有一个 `key` 属性，关于它的作用，我们讲虚拟dom 的时候会介绍
+然后就是渲染列表，我们使用 `map` 函数直接映射为 `JSX` 的数组，记得列表里每个元素都有一个 `key` 属性，关于它的作用，我们讲虚拟dom 的时候会介绍
 
 ### 组件嵌套和属性传递
 
-如果我们继续设计我们的应用，现在再设计一个`Tank` 组件，可以直接放在 `App` 里使用,并且可以传递一个属性，在组件内部，使用 `this.props.key` 获取
+如果我们继续设计我们的应用，现在再设计一个`Tank` 组件，可以直接放在 `App` 里使用,并且可以传递一个属性，在组件内部，使用 `this.props.key` 获取
 
 ```javascript
 
@@ -248,7 +247,7 @@ export default App
 
 ```
 
-如果我们的组件只有一个 `render` 方法，还可以写成一个函数，props 是函数的参数，我们称呼这种组件为无状态组件,这种组件的特点，就是返回只和 props 有关，复用性高
+如果我们的组件只有一个 `render` 方法，还可以写成一个函数，props 是函数的参数，我们称呼这种组件为无状态组件,这种组件的特点，就是返回只和 props 有关，复用性高
 
 ```javascript
 function Tank(props){
@@ -264,8 +263,8 @@ function Tank(props){
 
 ### React 状态管理和事件监听
 
-我们通过在构造函数constructor里初始 state，其实就是一个普通的 js 对象，然后可以调用 this.setState函数修改 state，每次 setState，都会重新渲染组件
-组件里可以使用 onClick来绑定一个函数，可以监听用户的事件，话不多说看代码
+我们通过在构造函数constructor里初始 state，其实就是一个普通的 js 对象，然后可以调用 this.setState函数修改 state，每次 setState，都会重新渲染组件
+组件里可以使用 onClick来绑定一个函数，可以监听用户的事件，话不多说看代码
 
 ```javascript
 class App extends Component {
@@ -299,7 +298,7 @@ class App extends Component {
 }
 
 ```
-我们需要关注的点，一个是`constructor`，我们称之为构造函数，组件初始化状态放在这里，设置了 `isKing` 是 `true`,然后`button` 元素上的 `onClick` 的时候，执行`handleClick`，在`handleClick`内部，调用 `this.setState` 来修改 `isKing`
+我们需要关注的点，一个是`constructor`，我们称之为构造函数，组件初始化状态放在这里，设置了 `isKing` 是 `true`,然后`button` 元素上的 `onClick` 的时候，执行`handleClick`，在`handleClick`内部，调用 `this.setState` 来修改 `isKing`
 
 `constructor`函数里的 `bind` 是强行把`handleClick`的 `this` 绑定在组件上，否则 `onClick` 的时候会获取 `this` 引用出错，解决这个问题还有其他的形式，可以不用写 `bind` 这一行
 ```javascript
@@ -454,6 +453,8 @@ componentDidUpdate, 组件 App 更新完毕了
 3. 如果是子组件，还有个`componentWillReceiveProps`
 4. 组件卸载有`componentWillUnmount`，用来做资源的清理
 5. 合理利用生命周期，在不同的阶段做不同的事情
-如果你能看到这里，那真的对 `React` 是真爱，恭喜你，你已经是秩序白银啦,今天的代码都在[github](https://github.com/shengxinjing/react_bronze_to_king/tree/master/bronze)
+如果你能看到这里，那真的对 `React` 是真爱，恭喜你，你已经是秩序白银啦领取徽章
+![](https://pic3.zhimg.com/v2-bfab7817df5b14ab9da1f15b001320d7_b.jpg)
+今天的代码都在[github](https://github.com/shengxinjing/react_bronze_to_king/tree/master/bronze)
 
-下期预告：秩序白银篇-- 使用 `ant-design` UI 库，有问题私聊，或者加微信，我们还可以开黑，一起上王者
+下期预告：秩序白银篇-- 使用 `ant-design` UI库，有问题留言，我们还可以开黑，一起上王者
