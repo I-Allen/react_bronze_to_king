@@ -15,24 +15,24 @@ React 峡谷的每个前端召唤师，根据对 React 技术栈 和前端的理
     * 学习 `React` 世界里的基本玩法，例如组件化，`JSX`，事件监听，内部 `state`，组件的`props`、生命周期函数等
     * 这篇文章主要介绍 `React` 青铜升白银需要的基础知识，看完你就白银啦
 2. 秩序白银
-    * 到了白银段位，基本都是有了基本的操作，不会出现呆萌的站在地方塔下被打死的情况了
-    * 我们需要买一个皮肤来提升页面美观并且多加练习
-    * 学习使用蚂蚁金服 `ant-design` 的使用
-3. 荣耀黄金
-    * 到了这个阶段，召唤师对 `React` 有了基本的认识，想进一步的提升段位，我们需要提高自己的大局观
+    * 到了白银段位，基本都是有了基本的操作，不会出现呆萌的站在地方塔下被打死的情况了
+    * 我们需要买一个皮肤来提升页面美观并且多加练习
+    * 学习使用蚂蚁金服 `ant-design` 的使用
+3. 荣耀黄金
+    * 到了这个阶段，召唤师对 `React` 有了基本的认识，想进一步的提升段位，我们需要提高自己的大局观
     * 学习使用 `React-Router4` 来让我们有多面作战能力
     * 学会使用 `BrowserRouter`，`Router`，`Link` 等组件
     * 学会使用 `Redux` 和队友配合，修炼大局观
-    * 了解单项数据流开发模式和 `Redux` 的各种概念,如 `dispatch`,`action`,`reducers`
-    * 使用 `react-redux` 更好的和 `Redux` 配合 有大局观意识，上铂金也是很 easy 了
+    * 了解单项数据流开发模式和 `Redux` 的各种概念,如 `dispatch`,`action`,`reducers`
+    * 使用 `react-redux` 更好的和 `Redux` 配合有大局观意识，上铂金也是很 easy 了
 
 4. 尊贵铂金
-    * 很多召唤师卡在铂金上不去，因为铂金想上钻石，需要了解更多的细节和原理
+    * 很多召唤师卡在铂金上不去，因为铂金想上钻石，需要了解更多的细节和原理
     * `React` 原理剖析
     * 对自己技能的原理有深刻的了解，上钻石必备
 
 5. 永恒钻石
-    * 钻石段位开始了征兆模式，召唤师的技能池要足够深才能更进一步，对自己擅长技能的理解也要更深刻
+    * 钻石段位开始了征兆模式，召唤师的技能池要足够深才能更进一步，对自己擅长技能的理解也要更深刻
     * `Redux` 中间件机制，实现自己的中间件
     * 常见的React 性能优化方式
     * 服务端渲染
@@ -52,10 +52,10 @@ React 峡谷的每个前端召唤师，根据对 React 技术栈 和前端的理
 下面开始我们的正文，倔强青铜篇目录
 
 1. 环境搭建
-2. 第一个组件
+2. 第一个组件
 3. 组件嵌套和属性传递
 4. 状态处理
-5. 生命周期
+5. 生命周期
 
 
 ### 环境搭建
@@ -123,13 +123,13 @@ export default App;
 
 这个基本上是最简单的 `React` 组件了，自己实现组件也是分这么几个步骤
 1. `import React`
-2. 新建一个类，继承 `React.Component`，`React` 里每个组件都可以写成一个类
-3. 类的 `render` 函数返回值，就是显示在页面的内容
-4. `render` 里返回的是东西有点奇怪，表面上是 `html`，其实 `Babel` 会把 `JSX` 转成 `React.createElememt`来执行
+2. 新建一个类，继承 `React.Component`，`React` 里每个组件都可以写成一个类
+3. 类的 `render` 函数返回值，就是显示在页面的内容
+4. `render` 里返回的是东西有点奇怪，表面上是 `html`，其实 `Babel` 会把 `JSX` 转成 `React.createElememt`来执行
 5. 由于 `JSX` 本质就是 js，`class` 是 js 的关键字，所以要用 `className` 代替
 6. 如果想在 `JSX` 里渲染变量，使用`{}`包裹即可
 
-先在[babel官网](http://babeljs.io/repl/),看下 `JSX` 编译后的代码，再划下重点，所谓的 `JSX`，其实就是js 对象，再用 `ReactDom.render` 方法，渲染成dom
+先在[babel官网](http://babeljs.io/repl/),看下 `JSX` 编译后的代码，再划下重点，所谓的 `JSX`，其实就是js 对象，再用 `ReactDom.render` 方法，渲染成dom
 
 ![](https://pic3.zhimg.com/v2-bc94a13f2d593658cc4c3c3fa7717e51_b.jpg)
 ```javascript
@@ -173,7 +173,7 @@ export default App
 
 ```
 
-由于 `JSX` 本质上其实就是 js，所以我们可以在`{}`里面使用 js 的表达式等功能，比如三元、函数、变量等等，还可以把数组映射为列表，我们把代码修改为
+由于`JSX` 本质上其实就是 js，所以我们可以在`{}`里面使用 js 的表达式等功能，比如三元、函数、变量等等，还可以把数组映射为列表，我们把代码修改为
 
 ```javascript
 import React, { Component } from 'react'
@@ -207,11 +207,11 @@ export default App
 
 我们在return 之外把 `JSX` 复制给变量，`JSX` 里也可以在`{}`内部使用三元表达式，大家可以修改 `isKing` 是 `false` 试一试
 
-然后就是渲染列表，我们使用 `map` 函数直接映射为 `JSX` 的数组，记得列表里每个元素都有一个 `key` 属性，关于它的作用，我们讲虚拟dom 的时候会介绍
+然后就是渲染列表，我们使用 `map` 函数直接映射为 `JSX` 的数组，记得列表里每个元素都有一个 `key` 属性，关于它的作用，我们讲虚拟dom 的时候会介绍
 
 ### 组件嵌套和属性传递
 
-如果我们继续设计我们的应用，现在再设计一个`Tank` 组件，可以直接放在 `App` 里使用,并且可以传递一个属性，在组件内部，使用 `this.props.key` 获取
+如果我们继续设计我们的应用，现在再设计一个`Tank` 组件，可以直接放在 `App` 里使用,并且可以传递一个属性，在组件内部，使用 `this.props.key` 获取
 
 ```javascript
 
@@ -299,7 +299,7 @@ class App extends Component {
 }
 
 ```
-我们需要关注的点，一个是`constructor`，我们称之为构造函数，组件初始化状态放在这里，设置了 `isKing` 是 `true`,然后 `button` 元素上的 `onClick` 的时候，执行`handleClick`，在`handleClick`内部，调用 `this.setState` 来修改 `isKing`
+我们需要关注的点，一个是`constructor`，我们称之为构造函数，组件初始化状态放在这里，设置了 `isKing` 是 `true`,然后`button` 元素上的 `onClick` 的时候，执行`handleClick`，在`handleClick`内部，调用 `this.setState` 来修改 `isKing`
 
 `constructor`函数里的 `bind` 是强行把`handleClick`的 `this` 绑定在组件上，否则 `onClick` 的时候会获取 `this` 引用出错，解决这个问题还有其他的形式，可以不用写 `bind` 这一行
 ```javascript
@@ -376,7 +376,7 @@ class App extends Component{
 
 ```
 
-`React` 在不同的阶段，会执行不同的函数，我从网上找了个图,很清晰的说明各个生命周期函数执行的时机，
+`React` 在不同的阶段，会执行不同的函数，我从网上找了个图,很清晰的说明各个生命周期函数执行的时机，
 
 ![](https://pic2.zhimg.com/v2-1db67230f5235f87522415c4d1ae867c_b.jpg)
 
@@ -448,13 +448,13 @@ componentDidUpdate, 组件 App 更新完毕了
 
 ```
 
-除了上面介绍的，还有需要注意的
-1. `React16`新增的`componentDidCatch`生命周期 用来处理报错
+除了上面介绍的，还有需要注意的
+1. `React16`新增的`componentDidCatch`生命周期，用来处理报错
 2. `shouldComponentUpdate`返回 `false`，那么组件就不会渲染
-3. 如果是子组件，还有个`componentWillReceiveProps`
+3. 如果是子组件，还有个`componentWillReceiveProps`
 4. 组件卸载有`componentWillUnmount`，用来做资源的清理
-4. 合理利用生命周期，在不同的阶段做不同的事情
+5. 合理利用生命周期，在不同的阶段做不同的事情
 
-如果你能看到这里，那真的对 `React` 是真爱，恭喜你，你已经是秩序白银啦,今天的代码都在[github]()
+如果你能看到这里，那真的对 `React` 是真爱，恭喜你，你已经是秩序白银啦,今天的代码都在[github](https://github.com/shengxinjing/react_bronze_to_king/tree/master/bronze)
 
 下期预告：秩序白银篇-- 使用 `ant-design` UI 库，有问题私聊，或者加微信，我们还可以开黑，一起上王者
