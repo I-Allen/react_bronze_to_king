@@ -10,8 +10,8 @@
 React 峡谷的每个前端召唤师，根据对 React 技术栈 和前端的理解，分别是青铜，白银，黄金，铂金，钻石，星耀和王者段位，也对应这这个系列教程的七个模块
 
 1. 倔强青铜 
-    * 初入峡谷的初始段位，默认召唤师已经有了 `ES6`，`nodejs` 的基础
-    * 使用 `create-react-app` 建立 `React` 开发环境
+    * 初入峡谷的初始段位，默认召唤师已经有了`ES6`，`nodejs` 的基础
+    * 使用 `create-react-app` 建立 `React` 开发环境
     * 学习 `React` 世界里的基本玩法，例如组件化，`JSX`，事件监听，内部 `state`，组件的`props`、生命周期函数等
     * 这篇文章主要介绍 `React` 青铜升白银需要的基础知识，看完你就白银啦
 2. 秩序白银
@@ -20,7 +20,7 @@ React 峡谷的每个前端召唤师，根据对 React 技术栈 和前端的理
     * 学习使用蚂蚁金服 `ant-design` 的使用
 3. 荣耀黄金
     * 到了这个阶段，召唤师对 `React` 有了基本的认识，想进一步的提升段位，我们需要提高自己的大局观
-    * 学习使用 `React-Router4` 来让我们有多面作战能力
+    * 学习使用 `React-Router4` 来让我们有多面作战能力
     * 学会使用 `BrowserRouter`，`Router`，`Link` 等组件
     * 学会使用 `Redux` 和队友配合，修炼大局观
     * 了解单项数据流开发模式和 `Redux` 的各种概念,如 `dispatch`,`action`,`reducers`
@@ -58,7 +58,7 @@ React 峡谷的每个前端召唤师，根据对 React 技术栈 和前端的理
 5. 生命周期
 
 
-### 环境搭建
+### 环境搭建
 默认大家已经有 node 环境了，先安装脚手架
 
 ```
@@ -125,11 +125,11 @@ export default App;
 1. `import React`
 2. 新建一个类，继承 `React.Component`，`React` 里每个组件都可以写成一个类
 3. 类的 `render` 函数返回值，就是显示在页面的内容
-4. `render` 里返回的是东西有点奇怪，表面上是 `html`，其实 `Babel` 会把 `JSX` 转成 `React.createElememt`来执行
+4. `render` 里返回的是东西有点诡异，表面上是`html` 其实 `Babel` 会把 `JSX` 转成 `React.createElememt`来执行
 5. 由于 `JSX` 本质就是 js，`class` 是 js 的关键字，所以要用 `className` 代替
 6. 如果想在 `JSX` 里渲染变量，使用`{}`包裹即可
 
-先在[babel官网](http://babeljs.io/repl/),看下 `JSX` 编译后的代码，再划下重点，所谓的 `JSX`，其实就是js 对象，再用 `ReactDom.render` 方法，渲染成dom
+现在[Babel官网]](http://babeljs.io/repl/),看下 `JSX`编译后的代码，再划下重点，所谓的 `JSX`，其实就是js 对象，再用 `ReactDom.render` 方法，渲染成dom
 
 ![](https://pic3.zhimg.com/v2-bc94a13f2d593658cc4c3c3fa7717e51_b.jpg)
 ```javascript
@@ -402,7 +402,7 @@ class App extends Component {
     console.log('componentDidMount，组件 App 渲染完毕')
   }
   shouldComponentUpdate(){
-    console.log('shouldComponentUpdate，判断 App 组件是否应该渲染， 默认返回 true')
+    console.log('shouldComponentUpdate，判断 App 组件是否应该渲染， 默认返回 true')
     return true
   }
   componentWillUpdate(){
@@ -449,12 +449,11 @@ componentDidUpdate, 组件 App 更新完毕了
 ```
 
 除了上面介绍的，还有需要注意的
-1. `React16`新增的`componentDidCatch`生命周期，用来处理报错
-2. `shouldComponentUpdate`返回 `false`，那么组件就不会渲染
-3. 如果是子组件，还有个`componentWillReceiveProps`
+1. `React16`新增的`componentDidCatch`生命周期，用来处理报错
+2. `shouldComponentUpdate`返回 `false`，那么组件就不会渲染
+3. 如果是子组件，还有个`componentWillReceiveProps`
 4. 组件卸载有`componentWillUnmount`，用来做资源的清理
 5. 合理利用生命周期，在不同的阶段做不同的事情
-
-如果你能看到这里，那真的对 `React` 是真爱，恭喜你，你已经是秩序白银啦,今天的代码都在[github](https://github.com/shengxinjing/react_bronze_to_king/tree/master/bronze)
+如果你能看到这里，那真的对 `React` 是真爱，恭喜你，你已经是秩序白银啦,今天的代码都在[github](https://github.com/shengxinjing/react_bronze_to_king/tree/master/bronze)
 
 下期预告：秩序白银篇-- 使用 `ant-design` UI 库，有问题私聊，或者加微信，我们还可以开黑，一起上王者
