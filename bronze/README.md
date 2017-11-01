@@ -453,8 +453,10 @@ componentDidUpdate, 组件 App 更新完毕了
 3. 如果是子组件，还有个`componentWillReceiveProps`
 4. 组件卸载有`componentWillUnmount`，用来做资源的清理
 5. 合理利用生命周期，在不同的阶段做不同的事情
-如果你能看到这里，那真的对 `React` 是真爱，恭喜你，你已经是秩序白银啦领取徽章
+如果你能看到这里，那真的对 `React` 是真爱，恭喜你，你已经是秩序白银啦，领取徽章
+
 ![](https://pic3.zhimg.com/v2-bfab7817df5b14ab9da1f15b001320d7_b.jpg)
+
 今天的代码都在[github](https://github.com/shengxinjing/react_bronze_to_king/tree/master/bronze)
 
-下期预告：秩序白银篇-- 使用 `ant-design` UI库，有问题留言，我们还可以开黑，一起上王者
+下期预告：秩序白银篇-- 使用 [ant-design](https://ant.design/index-cn) UI库，有问题留言，我们还可以开黑，一起上王者
